@@ -1,4 +1,6 @@
 class ClottersController < ApplicationController
+  before_action :set_clotter, only: [:show, :edit, :update]
+
   def index
     @clotter = Clotter.all
   end
@@ -12,11 +14,9 @@ class ClottersController < ApplicationController
   end
 
   def edit
-    @clotter = Clotter.find(params[:id])
   end
 
   def update
-    @clotter = Clotter.find(params[:id])
     if @clotter.update(blog_params)
       redirect_to clotters_path, notice: "ツイートを編集しました！"
     else
@@ -40,4 +40,9 @@ class ClottersController < ApplicationController
   def clotter_params
     params.require(:clotter).permit(:content)
   end
+
+  def set_clotter
+    @clotter = Clotter.find(params[:id])
+  end
+
 end
