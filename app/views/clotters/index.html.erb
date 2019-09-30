@@ -9,6 +9,7 @@
   <tr>
     <td><%= clotter.content %></td>
     <td><%= link_to "ツイートを編集する", edit_clotter_path(clotter.id) %></td>
+    <td><%= link_to 'ツイートを削除する', clotter_path(clotter.id), method: :delete ,data: { confirm: 'ツイートを削除しますか？' } %></td>
   </tr>
 <% end %>
 </table>

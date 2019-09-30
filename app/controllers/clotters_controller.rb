@@ -1,5 +1,5 @@
 class ClottersController < ApplicationController
-  before_action :set_clotter, only: [:show, :edit, :update]
+  before_action :set_clotter, only: [:show, :edit, :update, :destroy]
 
   def index
     @clotter = Clotter.all
@@ -33,6 +33,11 @@ class ClottersController < ApplicationController
       # 入力フォームを再描画します。
       render :new
     end
+  end
+
+  def destroy
+    @clotter.destroy
+    redirect_to clotters_path
   end
 
   private
