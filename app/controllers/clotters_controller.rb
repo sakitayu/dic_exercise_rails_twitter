@@ -40,6 +40,10 @@ class ClottersController < ApplicationController
     redirect_to clotters_path
   end
 
+  def confirm
+    @clotter = Clotter.new(clotter_params)
+  end
+
   private
 
   def clotter_params

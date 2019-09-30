@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  resources :clotters
+  resources :clotters do
+    collection do
+      post :confirm
+    end
+  end
 end
