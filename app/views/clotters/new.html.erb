@@ -1,0 +1,18 @@
+<%= form_with(model: @clotter, local: true) do |form| %>
+  <% if @clotter.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= @clotter.errors.count %>件のエラーがあります。</h2>
+      <ul>
+      <% @clotter.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="clotter_content">
+    <%= form.text_field :content %>
+  </div>
+  <%= form.submit "ツイート" %>
+<% end %>

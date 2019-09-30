@@ -1,0 +1,16 @@
+<h1>ツイート一覧</h1>
+
+<table>
+  <tr>
+    <th>内容</th>
+  </tr>
+
+<% @clotter.each do |clotter| %>
+  <tr>
+    <td><%= clotter.content %></td>
+    <td><%= link_to "ツイートを編集する", edit_clotter_path(clotter.id) %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to '新しくツイートする', new_clotter_path %>
