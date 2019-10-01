@@ -1,9 +1,9 @@
-<h3>以下の内容でツイートする。</h3>
+<h3>以下の内容でツイートします。いいですか？</h3>
 
 <%= form_with(model: @clotter, url: clotters_path, local: true) do |form| %>
   <%= form.hidden_field :content %>
 
   <p><%= @clotter.content %></p>
-  <%= form.submit  "本当にツイートする" %>
+  <%= form.submit  "本当にツイ〜トする" %>
   <%= form.submit "戻る", name: 'back' %>
 <% end %>

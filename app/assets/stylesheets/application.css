@@ -7,31 +7,37 @@ th {
    text-align: left;
  }
 
-#tweet-btn{
-   background-color: #1DA1F2;
+.tweet-btn{
+   background-color: #5AA3DA;
    color: white;
-   padding: 10px 50px;
+   padding: 15px 76px;
    text-decoration: none;
+   border-radius: 30px;
+   font-weight: bold;
  }
 
+.tweet-btn_mini{
+  background-color: #5AA3DA;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
 .header {
-  background-color: #ff1493;
+  /* background-color: #ff1493; */
   float: left;
   width: 300px;
   padding-left: 50px;
  }
 
-.left_menu {
-  background-color: #ffa500;
-  float: left;
-  width: 300px;
-}
 
 .tweets {
-  border-left: solid #c0c0c0 thin;
-  border-right: solid #c0c0c0 thin;
+  border-left: solid #dcdcdc thin;
+  border-right: solid #dcdcdc thin;
   float: left;
-  width: 500px;
+  width: 600px;
 }
 
 .right_menu {
@@ -44,4 +50,71 @@ th {
   background-color: grey;
   height: 100px;
   width: 100%;
+}
+
+.account_name {
+  font-weight: bold;
+}
+
+.top_home {
+  font-weight: bold;
+  font-size: 30px;
+  padding: 10px;
+  border-bottom: solid #dcdcdc thin;
+}
+
+.account_pic {
+  border-radius: 30px
+}
+
+.tweet_box {
+  padding: 10px;
+  border-top: solid #dcdcdc thin;
+}
+
+.top_box {
+  padding: 10px;
+}
+
+.tweet-btn_mini_float {
+  float: right;
+  font-weight: bold;
+}
+
+.pic {
+  float:left;
+}
+
+.edit {
+  vertical-align: top;
+}
+
+.name_and_content{
+  padding-left: 10px;
+  vertical-align: top;
+}
+
+.now {
+  padding-left: 10px;
+  color: grey;
+  font-size: 25px;
+}
+
+.top_box_btn{
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.main_tweet{
+  width:430px;
+}
+
+.bold_border {
+  height:10px;
+  background-color: #dcdcdc;
+}
+
+input[type="text"] {
+  width: 500px;
+  height: 200px;
 }

@@ -1,17 +1,39 @@
 
-
-<table>
-  <tr>
-    <th>ホーム</th>
-  </tr>
-
+<div class="top_home">
+  <span>ホーム</span>
+  <div class="tweet-btn_mini_float">
+  <%= image_tag "kirakira.png", size: '30x30' %>
+  </div>
+</div>
+<div class="top_box">
+  <%= image_tag "trump.png", size: '50x50', class: "account_pic" %>
+  <span class="now">いまどうしてる？</span>
+</div>
+<div class="top_box_btn">
+  <div class="tweet-btn_mini_float">
+    <%= link_to 'ツイ〜ト', new_clotter_path , class: "tweet-btn_mini" %>
+  </div>
+</div>
+<div class="bold_border"></div>
 <% @clotter.each do |clotter| %>
-  <tr>
-    <td><%= clotter.content %></td>
-    <td><%= link_to '編集', edit_clotter_path(clotter.id) %></td>
-    <td><%= link_to '削除', clotter_path(clotter.id), method: :delete ,data: { confirm: 'ツイートを削除しますか？' } %></td>
-  </tr>
+<div class="tweet_box">
+  <table>
+    <tr>
+      <td class="pic">
+        <%= image_tag "trump.png", size: '50x50', class: "account_pic" %>
+      </td>
+      <td class="name_and_content">
+        <span class="account_name">Donald F. Trump</span>@fakeDonaldTrump
+        <div class="main_tweet"><%= clotter.content %></div>
+      </td>
+      <td class="edit">
+        <%= link_to '編集', edit_clotter_path(clotter.id) %>
+        <%= link_to '削除', clotter_path(clotter.id), method: :delete ,data: { confirm: 'ツイ〜トを削除しますか？' } %>
+      </td>
+    </tr>
+  </table>
+</div>
 <% end %>
-</table>
 
-<%= link_to 'ツイート', new_clotter_path , id: "tweet-btn" %>
+
+
