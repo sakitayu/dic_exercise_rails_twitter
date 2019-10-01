@@ -16,22 +16,24 @@ class ClottersController < ApplicationController
   def edit
   end
 
-  def update
-    if @clotter.update(blog_params)
-      redirect_to clotters_path, notice: "ツイートを編集しました！"
+  def create
+    @clotter = Clotter.new(clotter_params)
+    if params[:back]
+      render :new
     else
-      render :edit
+      if @clotter.save
+        redirect_to clotters_path, notice: "ツイートしました！"
+      else
+        render 'new'
+      end
     end
   end
 
-  def create
-    @clotter = Clotter.create(clotter_params)
-    if @clotter.save
-      # 一覧画面へ遷移して"ブログを作成しました！"とメッセージを表示します。
-      redirect_to clotters_path, notice: "ブログを作成しました！"
+  def update
+    if @clotter.update(clotter_params)
+      redirect_to clotters_path, notice: "ツイートを編集しました！"
     else
-      # 入力フォームを再描画します。
-      render :new
+      render :edit
     end
   end
 
@@ -42,6 +44,7 @@ class ClottersController < ApplicationController
 
   def confirm
     @clotter = Clotter.new(clotter_params)
+    render :new if @clotter.invalid?
   end
 
   private

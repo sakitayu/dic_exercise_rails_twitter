@@ -1,8 +1,8 @@
-<h1>ツイート一覧</h1>
+
 
 <table>
   <tr>
-    <th>内容</th>
+    <th class="clotter_blue">ツイート</th>
   </tr>
 
 <% @clotter.each do |clotter| %>
@@ -14,4 +14,4 @@
 <% end %>
 </table>
 
-<%= link_to '新しくツイートする', new_clotter_path %>
+<%= link_to 'ツイート', new_clotter_path , id: "tweet-btn" %>
