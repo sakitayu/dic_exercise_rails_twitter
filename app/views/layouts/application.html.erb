@@ -10,6 +10,28 @@
   </head>
 
   <body>
+    <header class="header clearfix">
+    <%= link_to clotters_path do %>
+      <%= image_tag "logo.png", size: '50x50'%>
+    </a>
+    <% end %>
+    <p>○ ホーム</p>
+    <p>○ 話題を検索</p>
+    <p>○ 通知</p>
+    <p>○ メッセージ</p>
+    <p>○ ブックマーク</p>
+    <p>○ リスト</p>
+    <p>○ プロフィール</p>
+    <p>○ もっと見る</p>
+    </header>
+    <article class="tweets">
     <%= yield %>
+    </article>
+    <aside class="right_menu">
+    右メニュー
+    <footer class="footer">
+    フッターです
+    </footer>
+    </aside>
   </body>
 </html>

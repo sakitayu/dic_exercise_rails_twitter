@@ -1,11 +1,47 @@
+body {
+  margin: 0;
+  padding: 0;
+}
 
- .clotter_blue {
-   color: #1DA1F2;
+th {
+   text-align: left;
  }
 
- #tweet-btn{
+#tweet-btn{
    background-color: #1DA1F2;
    color: white;
    padding: 10px 50px;
    text-decoration: none;
  }
+
+.header {
+  background-color: #ff1493;
+  float: left;
+  width: 300px;
+  padding-left: 50px;
+ }
+
+.left_menu {
+  background-color: #ffa500;
+  float: left;
+  width: 300px;
+}
+
+.tweets {
+  border-left: solid #c0c0c0 thin;
+  border-right: solid #c0c0c0 thin;
+  float: left;
+  width: 500px;
+}
+
+.right_menu {
+  background-color: #d2b48c;
+  float: left;
+  width: 300px;
+}
+
+.footer {
+  background-color: grey;
+  height: 100px;
+  width: 100%;
+}

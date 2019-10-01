@@ -2,14 +2,14 @@
 
 <table>
   <tr>
-    <th class="clotter_blue">ツイート</th>
+    <th>ホーム</th>
   </tr>
 
 <% @clotter.each do |clotter| %>
   <tr>
     <td><%= clotter.content %></td>
-    <td><%= link_to "ツイートを編集する", edit_clotter_path(clotter.id) %></td>
-    <td><%= link_to 'ツイートを削除する', clotter_path(clotter.id), method: :delete ,data: { confirm: 'ツイートを削除しますか？' } %></td>
+    <td><%= link_to '編集', edit_clotter_path(clotter.id) %></td>
+    <td><%= link_to '削除', clotter_path(clotter.id), method: :delete ,data: { confirm: 'ツイートを削除しますか？' } %></td>
   </tr>
 <% end %>
 </table>

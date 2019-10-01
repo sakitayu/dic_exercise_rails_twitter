@@ -2,7 +2,7 @@ class ClottersController < ApplicationController
   before_action :set_clotter, only: [:show, :edit, :update, :destroy]
 
   def index
-    @clotter = Clotter.all
+    @clotter = Clotter.all.order(id: "desc")
   end
 
   def new
