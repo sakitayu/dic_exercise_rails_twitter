@@ -23,12 +23,20 @@
         <%= image_tag "trump.png", size: '50x50', class: "account_pic" %>
       </td>
       <td class="name_and_content">
-        <span class="account_name">Donald F. Trump</span>@fakeDonaldTrump
+        <span class="account_name">Donald F. Trump</span>
+        <span class="account_name_thin">@fakeDonaldTrump・</span>
+        
         <div class="main_tweet"><%= clotter.content %></div>
       </td>
       <td class="edit">
-        <%= link_to '編集', edit_clotter_path(clotter.id) %>
-        <%= link_to '削除', clotter_path(clotter.id), method: :delete ,data: { confirm: 'ツイ〜トを削除しますか？' } %>
+        <%= link_to edit_clotter_path(clotter.id) do %>
+          <%= image_tag "edit.png", size: '14x14' %>
+        <% end %>
+      </td>
+      <td class="edit">
+      <%= link_to clotter_path(clotter.id), method: :delete ,data: { confirm: 'ツイ〜トを削除しますか？' } do %>
+        <%= image_tag "delete.png", size: '14x14' %>
+      <% end %>
       </td>
     </tr>
   </table>

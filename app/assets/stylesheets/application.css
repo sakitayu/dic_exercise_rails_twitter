@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  background-repeat: no-repeat;
 }
 
 th {
@@ -56,6 +57,11 @@ th {
   font-weight: bold;
 }
 
+.account_name_thin {
+  color: grey;
+  font-size: 14px;
+}
+
 .top_home {
   font-weight: bold;
   font-size: 30px;
@@ -86,7 +92,13 @@ th {
 }
 
 .edit {
+  padding-top:5px;
   vertical-align: top;
+  background-color:white;
+}
+
+.edit img{
+  padding-left:8px;
 }
 
 .name_and_content{
@@ -106,7 +118,7 @@ th {
 }
 
 .main_tweet{
-  width:430px;
+  width:450px;
 }
 
 .bold_border {
@@ -117,4 +129,5 @@ th {
 input[type="text"] {
   width: 500px;
   height: 200px;
+  font-size:20px;
 }
