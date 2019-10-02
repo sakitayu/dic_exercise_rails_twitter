@@ -78,9 +78,14 @@ th {
   border-top: solid #dcdcdc thin;
 }
 
+.tweet_box:hover {
+  background-color: #f5f5f5;
+}
+
 .top_box {
   padding: 10px;
 }
+
 
 .tweet-btn_mini_float {
   float: right;
@@ -94,11 +99,10 @@ th {
 .edit {
   padding-top:5px;
   vertical-align: top;
-  background-color:white;
 }
 
 .edit img{
-  padding-left:8px;
+  padding-left:6px;
 }
 
 .name_and_content{
@@ -118,7 +122,7 @@ th {
 }
 
 .main_tweet{
-  width:450px;
+  width:455px;
 }
 
 .bold_border {
