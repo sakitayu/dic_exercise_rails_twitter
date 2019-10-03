@@ -49,12 +49,12 @@ class ClottersController < ApplicationController
 
   private
 
-  def clotter_params
-    params.require(:clotter).permit(:content)
-  end
-
-  def set_clotter
-    @clotter = Clotter.find(params[:id])
-  end
-
+    def clotter_params
+      params.require(:clotter).permit(:content)
+    end
+  
+    def set_clotter
+      @clotter = Clotter.find(params[:id])
+    end
+  
 end
