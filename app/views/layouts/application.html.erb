@@ -11,27 +11,80 @@
 
   <body>
     <header class="header clearfix">
-    <%= link_to clotters_path do %>
-      <%= image_tag "logo.png", size: '50x50'%>
-    <% end %>
-    <p> ○ ホーム</p>
-    <p> ○ 話題を検索</p>
-    <p> ○ 通知</p>
-    <p> ○ メッセージ</p>
-    <p> ○ ブックマーク</p>
-    <p> ○ リスト</p>
-    <p> ○ プロフィール</p>
-    <p> ○ もっと見る</p>
-    <%= link_to 'ツイ〜ト', new_clotter_path, class: "tweet-btn" %>
+      <div class="left_menu">
+        <%= link_to clotters_path do %>
+          <%= image_tag "logo.png", size: '50x50', class: 'clotter-bird' %>
+        <% end %>
+        <p class="left_home">&nbsp;&nbsp;○&nbsp;&nbsp;ホーム</p>
+        <p>&nbsp;&nbsp;○&nbsp;&nbsp;話題を検索</p>
+        <p>&nbsp;&nbsp;○&nbsp;&nbsp;通知</p>
+        <p>&nbsp;&nbsp;○&nbsp;&nbsp;メッセージ</p>
+        <p>&nbsp;&nbsp;○&nbsp;&nbsp;ブックマーク</p>
+        <p>&nbsp;&nbsp;○&nbsp;&nbsp;リスト</p>
+        <p>&nbsp;&nbsp;○&nbsp;&nbsp;プロフィール</p>
+        <p>&nbsp;&nbsp;○&nbsp;&nbsp;もっと見る</p>
+      </div>
+      <div class="left_tweet_btn">
+        <%= link_to 'ツイ〜ト', new_clotter_path, class: "tweet-btn" %>
+      </div>
     </header>
     <article class="tweets">
-    <%= yield %>
+      <%= yield %>
     </article>
     <aside class="right_menu">
-    右メニュー
-    <footer class="footer">
-    フッターです
-    </footer>
+      <div class="search-box">
+        <%= image_tag "search.png", size: '14x14', class: 'search-img' %>キーワード検索
+      </div>
+      <div class="trends">
+        <h2>おすすめトレンド</h2>
+        <p>#G20</p>
+        <p>マクドナルド</p>
+        <p>アメフト</p>
+        <p>#トランプのそっくりさん</p>
+        <p class="more_recommend">さらに表示</p>
+      </div>
+      <div class="users">
+        <h2>おすすめユーザー</h2>
+        <div>
+          <table>
+            <tr>
+              <td><%= image_tag "johnson.png", size: '50x50', class: "account_pic" %></td>
+              <td><span class="bold_span">Boris Johnson</span><br><span class="grey_span">@BorisJohnsonFake</span></td>
+            </tr>
+          </table>
+        </div>
+        <div>
+          <table>
+            <tr>
+              <td><%= image_tag "macron.png", size: '50x50', class: "account_pic" %></td>
+              <td><span class="bold_span">Emmanuel Macron</span><br>
+                <span class="grey_span">@emmanuelmacron_fake</span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div>
+          <table>
+            <tr>
+              <td><%= image_tag "merkel.png", size: '50x50', class: "account_pic" %></td>
+              <td><span class="bold_span">Angela Merkel</span><br>
+                <span class="grey_span">@AngelaMerkeFake</span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <p class="more_recommend">さらに表示</p>
+      </div>
+      <footer class="footer">
+        <div class="footer_info">
+          <p>利用規約</p>
+          <p>プライバシーポリシー</p>
+          <p>Cookie</p>
+          <p>広告情報</p>
+          <p>もっと見る</p>
+          <p>© 2019 Clotter, Inc.</p>
+        </div>
+      </footer>
     </aside>
   </body>
 </html>
