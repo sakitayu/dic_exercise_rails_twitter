@@ -8,10 +8,16 @@ header {
   float: left;
   width: 260px;
   padding-left: 50px;
- }
+}
+
+article {
+  margin-left:342px;
+}
 
 .left_menu {
   padding:10px 0 0 2px;
+  position: fixed;
+  margin-left:30px;
 }
 
 .clotter-bird {
@@ -73,6 +79,8 @@ th {
 .right_menu {
   float: left;
   width: 380px;
+  margin-left:940px;
+  position:fixed;
 }
 
 
